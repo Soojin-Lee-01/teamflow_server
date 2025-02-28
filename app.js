@@ -8,7 +8,8 @@ const multer = require('multer');
 const { Server } = require('socket.io');
 const session = require('express-session');
 const passport = require('./config/passport');
-const env = 'localDev';
+//const env = 'localDev';
+const env = 'production';
 const cors = require('cors');
 const config = require('./config/config.json')[env];
 
@@ -29,7 +30,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(
   cors({
-    origin: 'http://localhost:3000',
+    origin: '~',
     credentials: true,
   })
 );
