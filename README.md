@@ -8,6 +8,7 @@
 - 워크스페이스, Todo 생성/삭제/수정
 - 실시간 채팅 (텍스트, 이모티콘, 코드 블럭, 파일 전송)
 - 회원 정보 수정, 탈퇴, 로그아웃
+- 배포 (AWS EC2/RDS, Nginx 이용) 
 
 ## 👩‍💻 개발자
 <table align="center" style="table-layout: fixed; width: 100%;">
