@@ -35,10 +35,6 @@ const controller = require('../controllers/Cuser');
  *                 type: string
  *                 description: 사용자 닉네임
  *                 example: "철수"
- *               profile_image:
- *                 type: string
- *                 description: 사용자 프로필 사진 (선택 지정)
- *                 example: "사진1.jpg"
  *     responses:
  *       200:
  *         description: 회원가입 성공

@@ -7,6 +7,13 @@ const sendEmailMiddleware = require('../middlewares/emailMiddleware');
 
 /**
  * @swagger
+ * tags:
+ *   name: Password
+ *   description: 패스워드 설정 관련 API
+ */
+
+/**
+ * @swagger
  * /v1/user/request-reset:
  *   post:
  *     summary: 비밀번호 재설정 요청
