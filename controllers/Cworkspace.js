@@ -4,7 +4,7 @@ const workSpaceMemberModel = require('../models/WorkspaceMember');
 const chatRoomModel = require('../models/ChatRoom');
 const sendEmailMiddleware = require('../middlewares/emailMiddleware'); // 이메일 미들웨어
 const responseUtil = require('../utils/ResponseUtil');
-const crypto = require("crypto");
+const crypto = require('crypto');
 const WorkspaceMember = require('../models/WorkspaceMember');
 
 // 워크스페이스 생성
@@ -255,8 +255,14 @@ exports.getSpaceMember = async (req, res) => {
       },
       attributes: ['user_id', 'nickname', 'profile_image'],
     });
-    
-    return res.send(responseUtil('SUCCESS', '전체 사용자 조회 성공', members.map((member) => ({spaceId, ...member.dataValues}))));
+
+    return res.send(
+      responseUtil(
+        'SUCCESS',
+        '전체 사용자 조회 성공',
+        members.map((member) => ({ spaceId, ...member.dataValues }))
+      )
+    );
   } catch (error) {
     console.log('postSpaceMember Controller Err:', error);
     res.send(responseUtil('ERROR', '전체 사용자 조회 실패', null));

@@ -5,7 +5,12 @@ const path = require('path');
 
 const router = express.Router();
 const uploadDir = path.join(__dirname, '..', 'uploads');
-
+/**
+ * @swagger
+ * tags:
+ *   name: Fileupload
+ *   description: upload 관련 API
+ */
 // Multer 스토리지 설정
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -23,7 +28,7 @@ const upload = multer({ storage });
  * /upload:
  *   post:
  *     summary: 파일 업로드
- *     tags: [fileupload]
+ *     tags: [Fileupload]
  *     description: 클라이언트에서 업로드한 파일을 서버의 uploads 폴더에 저장하고, 접근 가능한 URL을 반환합니다.
  *     consumes:
  *       - multipart/form-data
